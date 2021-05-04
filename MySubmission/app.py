@@ -184,6 +184,13 @@ def notfoundError(error = None):
     response = jsonify(text)
     return response
 
+@app.errorhandler(500)
+def foundError(error = None):
+    text = {
+        "body" : "Any error: 500 internal server error"
+        }
+    return jsonify(text)
+
 def success():
     text = {
         "body" : "Action is succesfull",
