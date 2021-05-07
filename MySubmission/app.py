@@ -15,7 +15,7 @@ from podcast import Podcast
 from audiobook import Audiobook
 
 app = Flask(__name__)
-db_uri = "mongodb://localhost:27017/AudioAPI"
+db_uri = "mongodb://localhost:27017/<database_name>"
 app.config["MONGO_URI"] = db_uri
 database = PyMongo(app)
 
